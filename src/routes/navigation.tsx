@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route, NavLink, Navigate } from 'react-router-dom';
 
 import logo from '../assets/logo.svg';
+import { LazyPage1, LazyPage2, LazyPage3 } from '../01-lazyload/pages'
 
 export const Navigation = () => {
 
-    const markIfActive = ({isActive}: {isActive: boolean}): string => {
+    const markIfIsActive = ({isActive}: {isActive: boolean}): string => {
         return isActive ? 'nav-active' : ''
     }
 
@@ -15,34 +16,25 @@ export const Navigation = () => {
                     <img src={logo} alt="React logo" />
                     <ul>
                         <li>
-                            <NavLink to="/home" className={ markIfActive }>Home</NavLink>
+                            <NavLink to="/lazy1" className={ markIfIsActive }>Lazy 1</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/about" className={ markIfActive }>About</NavLink>
+                            <NavLink to="/lazy2" className={ markIfIsActive }>Lazy 2</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/users" className={ markIfActive }>Users</NavLink>
+                            <NavLink to="/lazy3" className={ markIfIsActive }>Lazy 3</NavLink>
                         </li>
                     </ul>
                 </nav>
 
-            <Routes>
-                <Route path="/about" element={ <About /> } />
-                <Route path="/users" element={ <h1>Users</h1> } />
-                <Route path="/home" element={ <h1>Home</h1> } />
+                <Routes>
+                    <Route path="/lazy1" element={ <LazyPage1 /> } />
+                    <Route path="/lazy2" element={ <LazyPage2 /> } />
+                    <Route path="/lazy3" element={ <LazyPage3 /> } />
 
-                <Route path="/*" element={ <Navigate to="/home" replace /> } />
-            </Routes>
+                    <Route path="/*" element={ <Navigate to="/lazy1" replace /> } />
+                </Routes>
             </div>
         </BrowserRouter>
     );
 };
-
-const About = () => {
-    return (
-        <div>
-            <h1>About</h1>
-            <hr />
-        </div>
-    )
-}
