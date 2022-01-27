@@ -28,3 +28,13 @@
     right: 10px;
     top: 0px;
 }
+
+.aditional-buttons button {
+    opacity: 0.7;
+    color: white;
+    border-color: white;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 18px;
+}
