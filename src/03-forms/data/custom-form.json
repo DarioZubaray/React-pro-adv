@@ -1,0 +1,92 @@
+[
+    {
+        "type": "input",
+        "name": "firstName",
+        "placeholder": "Ingrese su nombre",
+        "label": "Nombre",
+        "value": "",
+        "validations": [
+            {
+                "type": "required",
+                "description": "El nombre es requerido"
+            },
+            {
+                "type": "minLength",
+                "value": 5,
+                "description": "El nombre debe ser mayor a 5 caracteres"
+            }
+        ]
+    },
+    {
+        "type": "input",
+        "name": "lastName",
+        "placeholder": "Ingrese su apellido",
+        "label": "Apellido",
+        "value": "",
+        "validations": [
+            {
+                "type": "required",
+                "description": "El apellido es requerido"
+            }
+        ]
+    },
+    {
+        "type": "email",
+        "name": "email",
+        "placeholder": "Ingrese su correo",
+        "label": "Correo",
+        "value": "",
+        "validations": [
+            {
+                "type": "required",
+                "description": "El correo es requerido"
+            },
+            {
+                "type": "email",
+                "description": "El correo es no tiene un formato vàlido"
+            }
+        ]
+    },
+    {
+        "type": "select",
+        "name": "favoriteGames",
+        "label": "Favorite Games",
+        "value": "",
+        "options": [
+            {
+                "value": "Switch-1",
+                "label": "Mario odissey"
+            },
+            {
+                "value": "Switch-2",
+                "label": "Legend of Zelda: Breath of the Wild"
+            },
+            {
+                "value": "Switch-3",
+                "label": "Animal Crossing"
+            },
+            {
+                "value": "Switch-4",
+                "label": "Pokemon Let's go Pikachu/Evee"
+            },
+            {
+                "value": "Switch-5",
+                "label": "Pokemon Sword & Shield"
+            },
+            {
+                "value": "Switch-6",
+                "label": "Pokemon Brilliant Diamond/Shinny Pearl"
+            },
+            {
+                "value": "Switch-7",
+                "label": "Pokemon Legend Arcus"
+            }
+        ],
+        "validations": [
+            {
+                "type": "required",
+                "description": "El juego favorito es requerido"
+            }
+        ]
+    }
+]
